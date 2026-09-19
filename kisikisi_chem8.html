@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 8 Chemistry Review & Examination - 40 MCQ</title>
+    <style>
+        :root {
+            --primary-purple: #7b1fa2;
+            --secondary-purple: #ba68c8;
+            --light-purple-bg: #f3e5f5;
+            --card-bg: #f8bbd0;
+            --card-inner-bg: #faf0ca;
+            --accent-purple: #e1bee7;
+            --dark-text: #4a148c;
+            --border-color: #d1c4e9;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-purple-bg);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(123, 31, 162, 0.15);
+            border: 2px solid var(--border-color);
+        }
+        h1, h2, h3 {
+            color: var(--primary-purple);
+            text-align: center;
+        }
+        .header-info {
+            text-align: center;
+            border-bottom: 3px solid var(--secondary-purple);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .header-info h2 {
+            margin: 0 0 5px 0;
+            color: var(--dark-text);
+        }
+        .header-info h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-purple);
+        }
+        .header-info p {
+            margin: 4px 0;
+            font-size: 15px;
+        }
+        .teacher-tag {
+            display: inline-block;
+            background-color: var(--primary-purple);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .kisi-kisi-box {
+            background-color: #f3e5f5;
+            padding: 20px;
+            border-left: 6px solid var(--secondary-purple);
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .kisi-kisi-box h3 {
+            text-align: left;
+            margin-top: 0;
+            color: var(--primary-purple);
+        }
+        .kisi-kisi-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .kisi-kisi-box li {
+            margin-bottom: 8px;
+        }
+        .question-card {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+        .question-card:hover {
+            border-color: var(--secondary-purple);
+        }
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 14px;
+            color: var(--dark-text);
+            font-size: 16px;
+        }
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .options-list li {
+            margin-bottom: 10px;
+        }
+        .options-list label {
+            cursor: pointer;
+            display: block;
+            padding: 10px 14px;
+            background: #fbf7ff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .options-list label:hover {
+            background: var(--accent-purple);
+            color: var(--dark-text);
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: var(--primary-purple);
+            color: white;
+            border: none;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 25px;
+            box-shadow: 0 4px 10px rgba(123, 31, 162, 0.25);
+            transition: background-color 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #4a148c;
+        }
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f3e5f5;
+            color: var(--dark-text);
+            border: 2px solid var(--secondary-purple);
+            border-radius: 10px;
+            display: none;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-info">
+        <h2>CHEMISTRY REVIEW</h2>
+        <h3>SMP SWASTA INTEGRITAS BANGSA</h3>
+        <p><strong>Subject:</strong> Chemistry | <strong>Grade:</strong> 8 | <strong>Academic Year:</strong> 2026/2027</p>
+        <span class="teacher-tag">Teacher: Ms. Theres</span>
+    </div>
+
+    <!-- KISI-KISI-->
+    <div class="kisi-kisi-box">
+        <h3>📋 Material Review-Kisi-Kisi</h3>
+        <ul>
+            <li><strong>Acids, Alkalis, and pH Scale:</strong> Acid pH <7, base pH >7, neutral pH =7, acid-base indicators (litmus paper), and comparing acidity/alkalinity using pH values.</li>
+            <li><strong>Chemical Reactions of Acids:</strong> Reaction with reactive metals (producing salt + hydrogen gas), reaction with bases/alkalis (neutralisation producing salt + water), and reaction with carbonates (producing salt + water + carbon dioxide gas).</li>
+            <li><strong>Solubility & Salts:</strong> Soluble and insoluble salts (e.g., Copper(II) sulfate solubility), naming salts, and applications like CO₂ absorption in space using sodium hydroxide.</li>
+            <li><strong>Exothermic & Endothermic Reactions:</strong> Energy transfer to/from surroundings, temperature changes, enthalpy change (Delta H), and real-world examples (combustion, respiration, thermal decomposition, dissolving salts).</li>
+            <li><strong>Bond Energy & Activation Energy:</strong> Bond breaking (endothermic / absorbs energy) vs bond making (exothermic / releases energy), activation energy definition, and energy calculations (Delta H).</li>
+        </ul>
+    </div>
+
+    <form id="reviewForm">
+        <h2>Multiple Choice Questions</h2>
+        <div id="mcContainer"></div>
+
+        <button type="button" class="btn-submit" onclick="calculateScore()">Submit & Check Score</button>
+    </form>
+
+    <div id="resultBox" class="result-box"></div>
+</div>
+
+<script>
+    // 40 MCQ questions based directly on Grade 8 Chemistry Material
+    const mcQuestions = [
+        {
+            q: "The ion produced by acids when they dissolve in water is...",
+            options: ["OH⁻", "H⁺", "Na⁺", "Cl⁻"],
+            answer: 1
+        },
+        {
+            q: "Imagine a scale that measures how strong a liquid is. On one side are sour acids, and on the other side are bitter bases. Right in the middle, there is a peaceful balance that is completely safe and plain, like pure water. What number shows this perfect, neutral spot?",
+            options: ["9", "3", "7", "12"],
+            answer: 2
+        },
+        {
+            q: "Which equation represents the reaction between an acid and a reactive metal?",
+            options: [
+                "metal + acid → salt + hydrogen",
+                "metal + acid → salt + oxygen",
+                "metal + acid → water + carbon dioxide",
+                "metal + acid → metal hydroxide + hydrogen"
+            ],
+            answer: 0
+        },
+        {
+            q: "Which substance is an alkali?",
+            options: ["Copper(II) oxide", "Zinc oxide", "Sodium hydroxide", "Copper(II) carbonate"],
+            answer: 2
+        },
+        {
+            q: "When a liquid acid dissolves a powdery carbonate, a sudden fizzing releases a hidden vapor into the air. Which gas is set free by this chemical reaction?",
+            options: ["Hydrogen", "Oxygen", "Nitrogen", "Carbon dioxide"],
+            answer: 3
+        },
+        {
+            q: "Which reaction produces a salt and water as its only products?",
+            options: ["Acid + metal", "Acid + alkali", "Metal + water", "Salt + metal"],
+            answer: 1
+        },
+        {
+            q: "A student places blue litmus paper into a solution. The paper turns red. What can be concluded?",
+            options: ["The solution is alkaline.", "The solution is acidic.", "The solution is neutral.", "The solution is a salt."],
+            answer: 1
+        },
+        {
+            q: "Two mysterious liquids sit on a science laboratory shelf. The first liquid has a pH score of 4, while the second liquid holds a pH score of 6. Which statement is true?",
+            options: [
+                "The pH 6 solution is more acidic.",
+                "The pH 4 solution is more acidic.",
+                "Both solutions are neutral.",
+                "Both solutions have the same acidity."
+            ],
+            answer: 1
+        },
+        {
+            q: "Which word equation is correct for the reaction of an acid with a carbonate?",
+            options: [
+                "acid + carbonate → salt + hydrogen",
+                "acid + carbonate → salt + water + carbon dioxide",
+                "acid + carbonate → salt + oxygen",
+                "acid + carbonate → water + hydrogen"
+            ],
+            answer: 1
+        },
+        {
+            q: "Which salt is soluble in water?",
+            options: ["Copper(II) sulfate", "Copper(II) carbonate", "Copper(II) oxide", "Calcium carbonate"],
+            answer: 0
+        },
+        {
+            q: "Which statement correctly describes an exothermic reaction?",
+            options: [
+                "It absorbs thermal energy from the surroundings.",
+                "It transfers thermal energy to the surroundings.",
+                "It always causes the temperature to decrease.",
+                "It has a positive enthalpy change."
+            ],
+            answer: 1
+        },
+        {
+            q: "Some chemical reactions act like tiny fires that throw out heat, making everything warm. But other reactions act like greedy sponges, stealing heat from the room to make themselves work. Which reaction acts like a sponge and absorbs heat from its surroundings?",
+            options: [
+                "Combustion of wood",
+                "Respiration",
+                "Neutralisation of an acid and an alkali",
+                "Thermal decomposition of calcium carbonate"
+            ],
+            answer: 3
+        },
+        {
+            q: "Dissolving ammonium chloride in water causes the temperature to fall from 28°C to 22°C. What does this show?",
+            options: [
+                "Thermal energy is released.",
+                "The process is exothermic.",
+                "Thermal energy is absorbed from the surroundings.",
+                "The process has a negative ΔH."
+            ],
+            answer: 2
+        },
+        {
+            q: "The enthalpy change (ΔH) of a reaction is defined as:",
+            options: [
+                "The temperature of the reactants",
+                "The difference in energy content between products and reactants",
+                "The energy required to start a reaction only",
+                "The total mass of the products"
+            ],
+            answer: 1
+        },
+        {
+            q: "What does the activation energy represent?",
+            options: [
+                "The total energy released by a reaction.",
+                "The minimum energy needed for a reaction to start.",
+                "The energy stored only in the products.",
+                "The energy difference between reactants and products."
+            ],
+            answer: 1
+        },
+        {
+            q: "A reaction has an enthalpy change of +85 kJ. Which statement is correct?",
+            options: [
+                "The reaction is exothermic and releases 85 kJ.",
+                "The reaction is endothermic and absorbs 85 kJ.",
+                "The reaction is exothermic and absorbs 85 kJ.",
+                "The reaction is neutral and releases 85 kJ."
+            ],
+            answer: 1
+        },
+        {
+            q: "Which statement about bond breaking is correct?",
+            options: [
+                "Energy is released.",
+                "Energy is absorbed.",
+                "No energy change occurs.",
+                "Bonds break without any energy input."
+            ],
+            answer: 1
+        },
+        {
+            q: "Methane reacts with steam according to the equation: CH₄(g) + H₂O(g) → 3H₂(g) + CO(g), ΔH = +314 kJ. Which conclusion is correct?",
+            options: [
+                "The reaction releases 314 kJ of thermal energy.",
+                "The reaction is exothermic.",
+                "The products have less energy than the reactants.",
+                "The reaction absorbs 314 kJ of thermal energy."
+            ],
+            answer: 3
+        },
+        {
+            q: "Photosynthesis is an endothermic reaction. What happens to energy during photosynthesis?",
+            options: ["Energy is absorbed.", "Energy is released.", "No energy is involved.", "Energy is destroyed."],
+            answer: 0
+        },
+        {
+            q: "The bond energy of an H-H bond is 436 kJ/mol. Consider the reaction: 2H₂ → 4H. How much energy is needed to break all the H-H bonds in 2 molecules of H₂?",
+            options: ["436 kJ", "654 kJ", "872 kJ", "1,744 kJ"],
+            answer: 2
+        },
+        {
+            q: "Which ion is produced by alkalis when dissolved in water?",
+            options: ["H⁺", "OH⁻", "Cl⁻", "Na⁺"],
+            answer: 1
+        },
+        {
+            q: "Red litmus paper is dipped into a solution and turns blue. What type of solution is it?",
+            options: ["Acidic", "Alkaline", "Neutral", "Pure water"],
+            answer: 1
+        },
+        {
+            q: "Which of the following pH values indicates a strong acid?",
+            options: ["pH 1", "pH 6", "pH 7", "pH 14"],
+            answer: 0
+        },
+        {
+            q: "Which pH value represents a strong alkali?",
+            options: ["pH 2", "pH 7", "pH 8", "pH 13"],
+            answer: 3
+        },
+        {
+            q: "When an acid reacts with a metal carbonate, effervescence is observed. What causes this fizzing?",
+            options: ["Release of oxygen gas", "Release of hydrogen gas", "Release of carbon dioxide gas", "Boiling of water"],
+            answer: 2
+        },
+        {
+            q: "Why is sodium hydroxide used inside spacecraft air purification systems?",
+            options: [
+                "To produce oxygen for respiration.",
+                "To remove carbon dioxide from the air breathed out by astronauts.",
+                "To heat up the spacecraft cabin.",
+                "To purify drinking water."
+            ],
+            answer: 1
+        },
+        {
+            q: "If a chemical reaction causes the temperature of the mixture to rise from 25°C to 38°C, the reaction is...",
+            options: ["Endothermic", "Exothermic", "Isothermal", "Neutral"],
+            answer: 1
+        },
+        {
+            q: "During bond formation (bond making) in a chemical reaction, energy is always...",
+            options: ["absorbed", "released", "destroyed", "kept constant"],
+            answer: 1
+        },
+        {
+            q: "An exothermic reaction has an enthalpy change (ΔH) that is...",
+            options: ["positive (+)", "negative (-)", "zero", "always greater than +100 kJ"],
+            answer: 1
+        },
+        {
+            q: "An endothermic reaction has an enthalpy change (ΔH) that is...",
+            options: ["positive (+)", "negative (-)", "zero", "always less than -100 kJ"],
+            answer: 0
+        },
+        {
+            q: "Which gas ignites with a squeaky pop test?",
+            options: ["Oxygen", "Carbon dioxide", "Hydrogen", "Nitrogen"],
+            answer: 2
+        },
+        {
+            q: "What turns limewater cloudy?",
+            options: ["Hydrogen gas", "Oxygen gas", "Carbon dioxide gas", "Water vapor"],
+            answer: 2
+        },
+        {
+            q: "Hydrochloric acid reacts with sodium hydroxide to form sodium chloride and water. What type of reaction is this?",
+            options: ["Thermal decomposition", "Neutralisation", "Combustion", "Oxidation"],
+            answer: 1
+        },
+        {
+            q: "What name is given to soluble bases?",
+            options: ["Acids", "Alkalis", "Salts", "Oxides"],
+            answer: 1
+        },
+        {
+            q: "Which of these processes is an example of an exothermic reaction?",
+            options: ["Respiration", "Photosynthesis", "Thermal decomposition", "Melting of ice"],
+            answer: 0
+        },
+        {
+            q: "In an endothermic reaction, the energy of the products is...",
+            options: [
+                "higher than the energy of the reactants.",
+                "lower than the energy of the reactants.",
+                "equal to the energy of the reactants.",
+                "zero."
+            ],
+            answer: 0
+        },
+        {
+            q: "In an exothermic reaction, thermal energy is transferred from the reaction mixture to the...",
+            options: ["reactants", "products", "surroundings", "catalyst"],
+            answer: 2
+        },
+        {
+            q: "Which statement about bond energies is correct?",
+            options: [
+                "If energy absorbed to break bonds > energy released forming bonds, the reaction is endothermic.",
+                "If energy absorbed to break bonds > energy released forming bonds, the reaction is exothermic.",
+                "Bond breaking always releases energy.",
+                "Bond making always absorbs energy."
+            ],
+            answer: 0
+        },
+        {
+            q: "Consider the bond energies: H-H = 436 kJ/mol, O=O = 496 kJ/mol. How much energy is needed to break 2 moles of H-H bonds and 1 mole of O=O bonds?",
+            options: ["932 kJ", "1368 kJ", "872 kJ", "1800 kJ"],
+            answer: 1
+        },
+        {
+            q: "Universal indicator turns purple in a solution. What is the approximate pH of this solution?",
+            options: ["pH 2", "pH 7", "pH 4", "pH 12 - 14"],
+            answer: 3
+        }
+    ];
+
+    // Fisher-Yates Shuffle Function
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Render Unscrambled Questions & Choices
+    function renderMCQuestions() {
+        let shuffledQuestions = [...mcQuestions];
+        shuffleArray(shuffledQuestions);
+
+        const container = document.getElementById('mcContainer');
+        const labels = ['A', 'B', 'C', 'D'];
+
+        shuffledQuestions.forEach((qObj, index) => {
+            let optionsWithStatus = qObj.options.map((opt, i) => {
+                return { text: opt, isCorrect: i === qObj.answer };
+            });
+
+            shuffleArray(optionsWithStatus);
+
+            let qDiv = document.createElement('div');
+            qDiv.className = 'question-card';
+
+            let qText = document.createElement('div');
+            qText.className = 'question-title';
+            qText.innerHTML = `${index + 1}. ${qObj.q}`;
+            qDiv.appendChild(qText);
+
+            let optList = document.createElement('ul');
+            optList.className = 'options-list';
+
+            optionsWithStatus.forEach((optObj, optIndex) => {
+                let li = document.createElement('li');
+                li.innerHTML = `
+                    <label>
+                        <input type="radio" name="mc_${index}" value="${optObj.isCorrect}">
+                        ${labels[optIndex]}. ${optObj.text}
+                    </label>
+                `;
+                optList.appendChild(li);
+            });
+
+            qDiv.appendChild(optList);
+            container.appendChild(qDiv);
+        });
+    }
+
+    // Calculate Score
+    function calculateScore() {
+        let correctCount = 0;
+        const totalMC = mcQuestions.length;
+
+        for (let i = 0; i < totalMC; i++) {
+            const selectedOption = document.querySelector(`input[name="mc_${i}"]:checked`);
+            if (selectedOption && selectedOption.value === "true") {
+                correctCount++;
+            }
+        }
+
+        const score = Math.round((correctCount / totalMC) * 100);
+        const resultBox = document.getElementById('resultBox');
+        resultBox.style.display = 'block';
+        resultBox.innerHTML = `Your Final Score: ${score} / 100<br><span style="font-size: 16px; font-weight: normal;">(You answered ${correctCount} out of ${totalMC} questions correctly)</span>`;
+
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+        renderMCQuestions();
+    };
+</script>
+
+</body>
+</html>
