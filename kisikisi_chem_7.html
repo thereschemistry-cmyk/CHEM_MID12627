@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 7 Chemistry Review & Examination - 40 MCQ</title>
+    <style>
+        :root {
+            --primary-pink: #d81b60;
+            --secondary-pink: #f48fb1;
+            --light-pink-bg: #fce4ec;
+            --card-bg: #fff0f5;
+            --accent-pink: #f8bbd0;
+            --dark-text: #880e4f;
+            --border-color: #f8bbd0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-pink-bg);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(216, 27, 96, 0.15);
+            border: 1px solid var(--border-color);
+        }
+        h1, h2, h3 {
+            color: var(--primary-pink);
+            text-align: center;
+        }
+        .header-info {
+            text-align: center;
+            border-bottom: 3px solid var(--secondary-pink);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .header-info h2 {
+            margin: 0 0 5px 0;
+            color: var(--dark-text);
+        }
+        .header-info h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-pink);
+        }
+        .header-info p {
+            margin: 4px 0;
+            font-size: 15px;
+        }
+        .teacher-tag {
+            display: inline-block;
+            background-color: var(--primary-pink);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .kisi-kisi-box {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-left: 6px solid var(--secondary-pink);
+            margin-bottom: 30px;
+            border-radius: 6px;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .kisi-kisi-box h3 {
+            text-align: left;
+            margin-top: 0;
+            color: var(--primary-pink);
+        }
+        .kisi-kisi-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .kisi-kisi-box li {
+            margin-bottom: 8px;
+        }
+        .question-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 18px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
+        }
+        .question-card:hover {
+            border-color: var(--secondary-pink);
+        }
+        .question-title {
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--dark-text);
+        }
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .options-list li {
+            margin-bottom: 8px;
+        }
+        .options-list label {
+            cursor: pointer;
+            display: block;
+            padding: 10px 14px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .options-list label:hover {
+            background: var(--accent-pink);
+            color: var(--dark-text);
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 25px;
+            box-shadow: 0 4px 10px rgba(216, 27, 96, 0.2);
+            transition: background-color 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #ad1457;
+        }
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            background: #fce4ec;
+            color: var(--dark-text);
+            border: 2px solid var(--secondary-pink);
+            border-radius: 8px;
+            display: none;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-info">
+        <h2>CHEMISTRY REVIEW</h2>
+        <h3>SMP SWASTA INTEGRITAS BANGSA</h3>
+        <p><strong>Subject:</strong> Chemistry | <strong>Grade:</strong> 7 | <strong>Academic Year:</strong> 2026/2027</p>
+        <span class="teacher-tag">Teacher: Ms. Theres</span>
+    </div>
+
+    <!-- EXAM BLUEPRINT (KISI-KISI) -->
+    <div class="kisi-kisi-box">
+        <h3>📋 Material Review Blueprint (Kisi-Kisi)</h3>
+        <ul>
+            <li><strong>States of Matter & Particle Model:</strong> Arrangements, movement, compression, kinetic energy, and properties of solids, liquids, and gases.</li>
+            <li><strong>Changes of State:</strong> Melting, freezing, boiling, evaporation, condensation, and deposition. Cooling effects of evaporation and temperature vs particle motion.</li>
+            <li><strong>Gas Behavior & Diffusion:</strong> Pressure, temperature-volume relationship, particle diffusion speeds based on molecular mass/density, and food coloring in water experiment.</li>
+            <li><strong>Elements, Compounds, & Mixtures:</strong> Definitions of pure substances, elements, compounds, chemical formulas (e.g., H₂O, C₆₀ Fullerene), and separation techniques (magnetic separation, filtration, evaporation).</li>
+            <li><strong>Chemical Symbols:</strong> Chemical symbols for common elements (e.g., Ca, Fe, Ne, Si).</li>
+        </ul>
+    </div>
+
+    <form id="reviewForm">
+        <h2>Multiple Choice Questions</h2>
+        <div id="mcContainer"></div>
+
+        <button type="button" class="btn-submit" onclick="calculateScore()">Submit & Check Score</button>
+    </form>
+
+    <div id="resultBox" class="result-box"></div>
+</div>
+
+<script>
+    // 40 MCQ questions based on Grade 7 Chemistry material
+    const mcQuestions = [
+        {
+            q: "Tom is holding a hard wooden block in his hand. His teacher explains that the block is a solid, and it is made of billions of tiny particles that are trapped in a neat, tight pattern. Which statement correctly describes the particles inside Tom's solid block?",
+            options: [
+                "They are far apart and move freely.",
+                "They are close together and vibrate about fixed positions.",
+                "They are close together and move randomly throughout the container.",
+                "They have no kinetic energy."
+            ],
+            answer: 1
+        },
+        {
+            q: "Which property is shared by both liquids and gases?",
+            options: ["They have a fixed shape.", "They have a fixed volume.", "They can flow.", "They cannot be compressed."],
+            answer: 2
+        },
+        {
+            q: "A gas can be compressed more easily than a liquid because the particles in a gas...",
+            options: ["are smaller.", "move more slowly.", "have large spaces between them.", "have stronger forces of attraction."],
+            answer: 2
+        },
+        {
+            q: "A solid is heated until it becomes a liquid. What happens to its particles?",
+            options: [
+                "They stop moving.",
+                "They become closer together and stop vibrating.",
+                "They gain kinetic energy and can move past one another.",
+                "They lose kinetic energy and become fixed."
+            ],
+            answer: 2
+        },
+        {
+            q: "Which change of state occurs when a gas changes directly into a solid?",
+            options: ["Melting", "Condensation", "Freezing", "Deposition"],
+            answer: 3
+        },
+        {
+            q: "Sam heats a cup of water. Soon, bubbles form throughout the liquid and the water turns into gas. What is this process called?",
+            options: ["Melting", "Boiling", "Freezing", "Cooling"],
+            answer: 1
+        },
+        {
+            q: "Which process occurs when a liquid changes into a gas specifically at the surface of the liquid below its boiling point?",
+            options: ["Boiling", "Evaporation", "Condensation", "Freezing"],
+            answer: 1
+        },
+        {
+            q: "Siti spills a small puddle of water on her desk. After an hour, she touches the desk and notices the spot feels much cooler than the rest of the room. Her teacher explains that the liquid water changed into an invisible gas and carried the heat away into the air. What is the name of this phase change that caused the cooling?",
+            options: ["Freezing", "Evaporation", "Melting", "Condensation"],
+            answer: 1
+        },
+        {
+            q: "Water boils at 100°C at normal atmospheric pressure. If a substance has a boiling point of 80°C and a melting point of 10°C, what is its physical state at 90°C?",
+            options: ["Solid", "Liquid", "Gas", "Plasma"],
+            answer: 2
+        },
+        {
+            q: "A gas is heated while its pressure remains constant. What happens to its volume?",
+            options: ["It decreases.", "It remains unchanged.", "It increases.", "It becomes zero."],
+            answer: 2
+        },
+        {
+            q: "Mia warms up a solid block of chocolate in a pot. As the chocolate gets hotter, its temperature rises quickly. Inside the chocolate, the tiny particles are vibrating faster and faster. What type of energy is increasing inside the chocolate while the temperature goes up?",
+            options: ["Potential energy", "Kinetic energy", "Chemical energy", "Light energy"],
+            answer: 1
+        },
+        {
+            q: "Which gas would be expected to diffuse the fastest under the same temperature and pressure conditions?",
+            options: ["Hydrogen", "Oxygen", "Carbon dioxide", "Chlorine"],
+            answer: 0
+        },
+        {
+            q: "Which statement best defines an element?",
+            options: [
+                "A substance made from two or more elements chemically combined.",
+                "A substance that can be separated by filtration.",
+                "A pure substance that cannot be broken down into simpler substances by chemical processes.",
+                "A combination of different substances that are not chemically combined."
+            ],
+            answer: 2
+        },
+        {
+            q: "Leo is playing a science game on his computer. The game asks him to find a pure substance made of only one single type of atom. He looks at a list of items to see which one cannot be broken down into anything simpler. Which of the following is an element?",
+            options: ["Water", "Carbon dioxide", "Oxygen", "Sodium chloride"],
+            answer: 2
+        },
+        {
+            q: "Which pair contains ONLY elements?",
+            options: [
+                "Oxygen and hydrogen",
+                "Water and oxygen",
+                "Carbon dioxide and nitrogen",
+                "Sodium chloride and hydrogen"
+            ],
+            answer: 0
+        },
+        {
+            q: "What is a compound?",
+            options: [
+                "Two or more substances physically mixed together.",
+                "Two or more elements chemically combined in fixed proportions.",
+                "A substance containing only one type of atom.",
+                "A substance that can always be separated by filtration."
+            ],
+            answer: 1
+        },
+        {
+            q: "What does the chemical formula H₂O tell us about one molecule of water?",
+            options: [
+                "It contains two hydrogen atoms and one oxygen atom.",
+                "It contains one hydrogen atom and two oxygen atoms.",
+                "It contains two hydrogen molecules and one oxygen molecule.",
+                "It contains two elements and two atoms."
+            ],
+            answer: 0
+        },
+        {
+            q: "Which statement correctly compares a compound with a mixture?",
+            options: [
+                "Both always contain elements in fixed proportions.",
+                "A compound can be separated by physical methods, but a mixture cannot.",
+                "The substances in a mixture are not chemically combined.",
+                "A mixture always has completely different properties from its components."
+            ],
+            answer: 2
+        },
+        {
+            q: "Which of the following is classified as a mixture?",
+            options: ["Oxygen", "Carbon dioxide", "Water", "Air"],
+            answer: 3
+        },
+        {
+            q: "A student has a mixture of iron filings and sulfur powder. Which method would be most suitable for separating them easily?",
+            options: ["Filtration", "Using a magnet", "Evaporation", "Distillation"],
+            answer: 1
+        },
+        {
+            q: "What chemical element is represented by the symbol 'Ca'?",
+            options: ["Carbon", "Calcium", "Copper", "Californium"],
+            answer: 1
+        },
+        {
+            q: "What chemical element is represented by the symbol 'Fe'?",
+            options: ["Fluorine", "Iron", "Francium", "Iridium"],
+            answer: 1
+        },
+        {
+            q: "What chemical element is represented by the symbol 'Ne'?",
+            options: ["Sodium", "Nitrogen", "Neon", "Nickel"],
+            answer: 2
+        },
+        {
+            q: "What chemical element is represented by the symbol 'Si'?",
+            options: ["Silver", "Silicon", "Sulfur", "Sodium"],
+            answer: 1
+        },
+        {
+            q: "Fullerene was discovered in 1985. It has the chemical formula C₆₀. What does this formula tell us about fullerene?",
+            options: [
+                "It is a compound made of 60 different elements.",
+                "It is an element made of molecules containing 60 carbon atoms bonded together.",
+                "It is a mixture of carbon and oxygen.",
+                "It is a liquid at room temperature."
+            ],
+            answer: 1
+        },
+        {
+            q: "If a drop of food coloring is placed in a beaker of water, it gradually spreads throughout the liquid without being stirred. This process is called...",
+            options: ["filtration", "condensation", "diffusion", "evaporation"],
+            answer: 2
+        },
+        {
+            q: "A student is given a mixture containing iron filings, sulfur powder, and water. What is the correct first step to remove the iron filings?",
+            options: [
+                "Boil the water away.",
+                "Pass a magnet through the mixture or over the container.",
+                "Filter the liquid using filter paper.",
+                "Freeze the mixture."
+            ],
+            answer: 1
+        },
+        {
+            q: "After removing iron filings from a mixture of iron, sulfur, and water, how can the insoluble sulfur powder be separated from the liquid water?",
+            options: ["By filtration", "By magnetic separation", "By condensation", "By diffusion"],
+            answer: 0
+        },
+        {
+            q: "When a gas cools down and turns into a liquid, what is this change of state called?",
+            options: ["Melting", "Freezing", "Condensation", "Deposition"],
+            answer: 2
+        },
+        {
+            q: "In which state of matter do particles have the highest kinetic energy and move randomly at high speeds?",
+            options: ["Solid", "Liquid", "Gas", "All have equal kinetic energy"],
+            answer: 2
+        },
+        {
+            q: "Why do solids have a fixed shape and volume?",
+            options: [
+                "Their particles are far apart and move freely.",
+                "Their particles are held tightly in fixed positions by strong forces of attraction.",
+                "Their particles can easily slide past each other.",
+                "Their particles have no mass."
+            ],
+            answer: 1
+        },
+        {
+            q: "Which state change is the reverse of deposition (gas to solid)?",
+            options: ["Sublimation (solid to gas)", "Freezing", "Melting", "Boiling"],
+            answer: 0
+        },
+        {
+            q: "Why does diffusion happen faster in gases than in liquids?",
+            options: [
+                "Gas particles are larger.",
+                "Gas particles move faster and have larger spaces between them.",
+                "Liquid particles have more kinetic energy.",
+                "Gas particles attract each other more strongly."
+            ],
+            answer: 1
+        },
+        {
+            q: "Substances in a mixture maintain their individual chemical properties because...",
+            options: [
+                "they are chemically bonded together.",
+                "they are physically mixed and not chemically combined.",
+                "they are always in fixed ratios.",
+                "they cannot be separated by physical methods."
+            ],
+            answer: 1
+        },
+        {
+            q: "Pure table salt (sodium chloride, NaCl) is classified as a...",
+            options: ["Element", "Compound", "Mixture", "Atom"],
+            answer: 1
+        },
+        {
+            q: "When ice melts into water at 0°C, what happens to the temperature of the ice-water mixture during the melting process?",
+            options: [
+                "It increases rapidly.",
+                "It decreases.",
+                "It remains constant at 0°C until all ice melts.",
+                "It fluctuates continuously."
+            ],
+            answer: 2
+        },
+        {
+            q: "Which property explains why liquids take the shape of their container but maintain a fixed volume?",
+            options: [
+                "Particles are close together but can move past one another.",
+                "Particles are far apart and fill all available space.",
+                "Particles are locked in a rigid lattice.",
+                "Particles have no forces of attraction."
+            ],
+            answer: 0
+        },
+        {
+            q: "Which of the following describes a physical change, NOT a chemical change?",
+            options: [
+                "Iron rusting in air",
+                "Wood burning into ash",
+                "Ice melting into water",
+                "Baking a cake"
+            ],
+            answer: 2
+        },
+        {
+            q: "What is the chemical symbol for the element Nitrogen?",
+            options: ["Ni", "Na", "N", "Ne"],
+            answer: 2
+        },
+        {
+            q: "What is the chemical symbol for the element Sodium?",
+            options: ["So", "Sd", "Na", "S"],
+            answer: 2
+        }
+    ];
+
+    // Fisher-Yates Shuffle Function
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Render Unscrambled Questions & Options
+    function renderMCQuestions() {
+        let shuffledQuestions = [...mcQuestions];
+        shuffleArray(shuffledQuestions);
+
+        const container = document.getElementById('mcContainer');
+        const labels = ['A', 'B', 'C', 'D'];
+
+        shuffledQuestions.forEach((qObj, index) => {
+            let optionsWithStatus = qObj.options.map((opt, i) => {
+                return { text: opt, isCorrect: i === qObj.answer };
+            });
+
+            shuffleArray(optionsWithStatus);
+
+            let qDiv = document.createElement('div');
+            qDiv.className = 'question-card';
+
+            let qText = document.createElement('div');
+            qText.className = 'question-title';
+            qText.innerHTML = `${index + 1}. ${qObj.q}`;
+            qDiv.appendChild(qText);
+
+            let optList = document.createElement('ul');
+            optList.className = 'options-list';
+
+            optionsWithStatus.forEach((optObj, optIndex) => {
+                let li = document.createElement('li');
+                li.innerHTML = `
+                    <label>
+                        <input type="radio" name="mc_${index}" value="${optObj.isCorrect}">
+                        ${labels[optIndex]}. ${optObj.text}
+                    </label>
+                `;
+                optList.appendChild(li);
+            });
+
+            qDiv.appendChild(optList);
+            container.appendChild(qDiv);
+        });
+    }
+
+    // Calculate Score
+    function calculateScore() {
+        let correctCount = 0;
+        const totalMC = mcQuestions.length;
+
+        for (let i = 0; i < totalMC; i++) {
+            const selectedOption = document.querySelector(`input[name="mc_${i}"]:checked`);
+            if (selectedOption && selectedOption.value === "true") {
+                correctCount++;
+            }
+        }
+
+        const score = Math.round((correctCount / totalMC) * 100);
+        const resultBox = document.getElementById('resultBox');
+        resultBox.style.display = 'block';
+        resultBox.innerHTML = `Your Final Score: ${score} / 100<br><span style="font-size: 16px; font-weight: normal;">(You answered ${correctCount} out of ${totalMC} questions correctly)</span>`;
+
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+        renderMCQuestions();
+    };
+</script>
+
+</body>
+</html>
