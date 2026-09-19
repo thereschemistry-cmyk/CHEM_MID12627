@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 9 Chemistry Review & Examination - 40 MCQ</title>
+    <style>
+        :root {
+            --primary-yellow: #f57f17;
+            --secondary-yellow: #fbc02d;
+            --light-yellow-bg: #fffde7;
+            --card-bg: #fff9c4;
+            --accent-yellow: #ffe082;
+            --dark-text: #f57f17;
+            --text-color: #3e2723;
+            --border-color: #ffe082;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-yellow-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(245, 127, 23, 0.15);
+            border: 2px solid var(--border-color);
+        }
+        h1, h2, h3 {
+            color: var(--primary-yellow);
+            text-align: center;
+        }
+        .header-info {
+            text-align: center;
+            border-bottom: 3px solid var(--secondary-yellow);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #fffde7, #ffe082);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .header-info h2 {
+            margin: 0 0 5px 0;
+            color: var(--text-color);
+        }
+        .header-info h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-yellow);
+        }
+        .header-info p {
+            margin: 4px 0;
+            font-size: 15px;
+        }
+        .teacher-tag {
+            display: inline-block;
+            background-color: var(--primary-yellow);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .kisi-kisi-box {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-left: 6px solid var(--secondary-yellow);
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .kisi-kisi-box h3 {
+            text-align: left;
+            margin-top: 0;
+            color: var(--primary-yellow);
+        }
+        .kisi-kisi-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .kisi-kisi-box li {
+            margin-bottom: 8px;
+        }
+        .question-card {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+        .question-card:hover {
+            border-color: var(--secondary-yellow);
+        }
+        .question-title {
+            font-weight: bold;
+            margin-bottom: 14px;
+            color: var(--text-color);
+            font-size: 16px;
+        }
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .options-list li {
+            margin-bottom: 10px;
+        }
+        .options-list label {
+            cursor: pointer;
+            display: block;
+            padding: 10px 14px;
+            background: #fffde7;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .options-list label:hover {
+            background: var(--accent-yellow);
+            color: var(--text-color);
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: var(--primary-yellow);
+            color: white;
+            border: none;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 25px;
+            box-shadow: 0 4px 10px rgba(245, 127, 23, 0.25);
+            transition: background-color 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #e65100;
+        }
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            background: #fffde7;
+            color: var(--text-color);
+            border: 2px solid var(--secondary-yellow);
+            border-radius: 10px;
+            display: none;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-info">
+        <h2>CHEMISTRY REVIEW</h2>
+        <h3>SMP SWASTA INTEGRITAS BANGSA</h3>
+        <p><strong>Subject:</strong> Chemistry | <strong>Grade:</strong> 9 | <strong>Academic Year:</strong> 2026/2027</p>
+        <span class="teacher-tag">Teacher: Ms. Theres</span>
+    </div>
+
+    <!-- EXAM BLUEPRINT (KISI-KISI) -->
+    <div class="kisi-kisi-box">
+        <h3>📋 Material Review Blueprint (Kisi-Kisi)</h3>
+        <ul>
+            <li><strong>Properties of Metals & Non-metals:</strong> Malleability, ductility, conductivity, mercury as liquid metal, aluminium oxide protective layer, and copper applications.</li>
+            <li><strong>Alloys & Molecular Structure:</strong> Definition of alloys, brass (copper + zinc), bronze (copper + tin), and why alloys are harder than pure metals (disrupted atomic arrangements).</li>
+            <li><strong>Reactivity Series & Displacement Reactions:</strong> Reactivity order (K > Na > Ca > Mg > Al > C > Zn > Fe > H > Cu > Ag > Au), reaction with acids/water, and displacement reactions.</li>
+            <li><strong>Corrosion & Physical vs Chemical Changes:</strong> Rusting of iron (requires water and oxygen), word equation for rusting, and differentiating physical changes (e.g., ice melting) from chemical changes.</li>
+            <li><strong>Rates of Reaction & Catalysts:</strong> Five factors affecting reaction rate (concentration, temperature, surface area, pressure, catalyst), collision theory, activation energy, and catalyst graphs.</li>
+        </ul>
+    </div>
+
+    <form id="reviewForm">
+        <h2>Multiple Choice Questions</h2>
+        <div id="mcContainer"></div>
+
+        <button type="button" class="btn-submit" onclick="calculateScore()">Submit & Check Score</button>
+    </form>
+
+    <div id="resultBox" class="result-box"></div>
+</div>
+
+<script>
+    // 40 MCQ questions based directly on Grade 9 Chemistry Material
+    const mcQuestions = [
+        {
+            q: "Which of the following is a physical property shared by most metals?",
+            options: ["Dull appearance", "Brittle when solid", "Malleable and ductile", "Poor electrical conductor"],
+            answer: 2
+        },
+        {
+            q: "Which metal is a liquid at room temperature, unlike most other metals?",
+            options: ["Iron", "Mercury", "Copper", "Zinc"],
+            answer: 1
+        },
+        {
+            q: "What is the general word equation for the reaction between a metal and a dilute acid?",
+            options: [
+                "metal + acid → metal oxide + water",
+                "metal + acid → salt + hydrogen",
+                "metal + acid → salt + oxygen",
+                "metal + acid → metal hydroxide + oxygen"
+            ],
+            answer: 1
+        },
+        {
+            q: "Which properties make copper a suitable material for electrical wiring?",
+            options: [
+                "Low density and a very high melting point",
+                "Good electrical conductivity and ductility",
+                "Brittleness and a dull appearance",
+                "Poor thermal conductivity and high reactivity"
+            ],
+            answer: 1
+        },
+        {
+            q: "Which set of properties explains why aluminium is widely used in aircraft construction?",
+            options: [
+                "Low density, high strength, and good corrosion resistance",
+                "Very high density and poor electrical conductivity",
+                "High reactivity and a very low melting point",
+                "Brittleness and poor thermal conductivity"
+            ],
+            answer: 0
+        },
+        {
+            q: "Nina is looking at a shiny yellow trumpet in her school music room. Her teacher explains that the instrument is made of brass. Brass is an alloy made from which two metals?",
+            options: ["Tin and lead", "Iron and carbon", "Copper and zinc", "Copper and nickel"],
+            answer: 2
+        },
+        {
+            q: "Using the reactivity series (K > Na > Ca > Mg > Al > C > Zn > Fe > H > Cu > Ag > Au), which metal reacts most violently with cold water?",
+            options: ["Magnesium", "Zinc", "Potassium", "Copper"],
+            answer: 2
+        },
+        {
+            q: "Alloys are generally harder than the pure metals they are made from because:",
+            options: [
+                "alloys contain no free electrons",
+                "different-sized atoms disrupt the regular arrangement of metal atoms",
+                "alloys always have lower melting points than pure metals",
+                "all the atoms in an alloy are exactly the same size"
+            ],
+            answer: 1
+        },
+        {
+            q: "Magnesium is added to aqueous copper(II) sulfate (Mg + Cu²⁺ → Mg²⁺ + Cu). Which statement is correct?",
+            options: [
+                "Copper displaces magnesium.",
+                "Magnesium displaces copper.",
+                "Magnesium and copper form an alloy.",
+                "The reaction is a neutralisation reaction."
+            ],
+            answer: 1
+        },
+        {
+            q: "Tom notices that his iron bicycle chain is covered in a reddish-brown layer of rust. What two substances must be present for iron to rust?",
+            options: ["Oxygen and water", "Heat and salt", "Carbon dioxide and light", "Water and carbon"],
+            answer: 0
+        },
+        {
+            q: "A student observes four changes. Which change is a physical change?",
+            options: ["Iron rusting", "Zinc reacting with hydrochloric acid", "Ice melting", "Wood burning"],
+            answer: 2
+        },
+        {
+            q: "Which expression can be used to determine the average rate of a reaction that produces gas?",
+            options: [
+                "(change in volume of gas) / (change in time)",
+                "(volume of gas) × (time)",
+                "(change in time) / (change in volume of gas)",
+                "(volume of gas) / (time²)"
+            ],
+            answer: 0
+        },
+        {
+            q: "Which of the following is NOT one of the main factors affecting the rate of reaction?",
+            options: ["Concentration", "Catalyst", "Colour of the reactants", "Surface area"],
+            answer: 2
+        },
+        {
+            q: "When a catalyst like iron(III) oxide (Fe₂O₃) is added to a chemical reaction, how does the graph of gas volume versus time change compared to an uncatalyzed reaction?",
+            options: [
+                "The reaction curve is steeper at the start but reaches the same final volume of gas.",
+                "The reaction curve is flatter and takes longer to finish.",
+                "The total volume of gas produced doubles.",
+                "The reaction stops completely."
+            ],
+            answer: 0
+        },
+        {
+            q: "Breaking a solid reactant into smaller pieces increases the rate of reaction mainly because:",
+            options: [
+                "the total surface area available for collisions increases.",
+                "the activation energy of the reaction increases.",
+                "the number of reactant particles decreases.",
+                "the reaction becomes exothermic."
+            ],
+            answer: 0
+        },
+        {
+            q: "Which statement about a catalyst is correct?",
+            options: [
+                "It is completely consumed during the reaction.",
+                "It slows down every reaction.",
+                "It provides an alternative reaction pathway with lower activation energy.",
+                "It increases the temperature of the reaction."
+            ],
+            answer: 2
+        },
+        {
+            q: "A reaction takes 50 seconds at 25°C and 30 seconds at 45°C. Which statement is supported by the results?",
+            options: [
+                "Increasing temperature made the reaction slower.",
+                "Increasing temperature made the reaction faster.",
+                "Temperature had no effect.",
+                "The reaction stopped at 45°C."
+            ],
+            answer: 1
+        },
+        {
+            q: "Iron reacts with dilute hydrochloric acid to produce iron(II) chloride and hydrogen gas. What type of change occurs?",
+            options: ["Physical change", "Chemical change", "Change of state", "Dissolution only"],
+            answer: 1
+        },
+        {
+            q: "Increasing temperature usually increases the rate of reaction because...",
+            options: [
+                "particles become heavier",
+                "particles move faster and collisions are more frequent and energetic",
+                "particles become smaller",
+                "there are fewer collisions"
+            ],
+            answer: 1
+        },
+        {
+            q: "A steel bicycle is left outside in humid weather. After several months, rust forms. How is rusting classified by speed?",
+            options: ["Very fast reaction", "Fast reaction", "Slow reaction", "Instantaneous reaction"],
+            answer: 2
+        },
+        {
+            q: "Aluminium is high in the reactivity series, yet it does not corrode easily in air. Why?",
+            options: [
+                "It reacts with water to stay clean.",
+                "It forms a tough, unreactive oxide layer on its surface that protects it.",
+                "It is a noble metal like gold.",
+                "It has no free electrons."
+            ],
+            answer: 1
+        },
+        {
+            q: "What is the correct chemical name for rust?",
+            options: ["Hydrated iron(III) oxide", "Iron carbonate", "Iron chloride", "Hydrated copper sulfate"],
+            answer: 0
+        },
+        {
+            q: "Raw chicken liver contains the enzyme catalase, which breaks down hydrogen peroxide into water and oxygen. What test confirms oxygen gas is produced?",
+            options: [
+                "A squeaky pop with a lighted splint",
+                "A glowing splint rekindles / relights",
+                "Limewater turns cloudy",
+                "Damp blue litmus turns red"
+            ],
+            answer: 1
+        },
+        {
+            q: "If 54 cm³ of carbon dioxide gas is collected in 3.0 minutes during a reaction between calcium carbonate and acid, what is the average rate of reaction in cm³/min?",
+            options: ["18 cm³/min", "162 cm³/min", "0.05 cm³/min", "27 cm³/min"],
+            answer: 0
+        },
+        {
+            q: "Which element is unreactive and found uncombined in the Earth's crust?",
+            options: ["Potassium", "Sodium", "Gold", "Magnesium"],
+            answer: 2
+        },
+        {
+            q: "Bronze is an alloy made primarily of which two elements?",
+            options: ["Copper and tin", "Iron and zinc", "Copper and zinc", "Aluminium and copper"],
+            answer: 0
+        },
+        {
+            q: "What happens to the activation energy of a reaction when a suitable catalyst is added?",
+            options: ["It increases.", "It decreases.", "It stays the same.", "It becomes zero."],
+            answer: 1
+        },
+        {
+            q: "Which state of matter allows particles to collide most frequently due to high kinetic energy and random motion?",
+            options: ["Solid", "Liquid", "Gas", "Lattice"],
+            answer: 2
+        },
+        {
+            q: "Why does increasing the concentration of a liquid reactant increase the reaction rate?",
+            options: [
+                "It increases the activation energy.",
+                "There are more reactant particles per unit volume, increasing collision frequency.",
+                "It increases the mass of individual particles.",
+                "It changes the temperature of the solution."
+            ],
+            answer: 1
+        },
+        {
+            q: "Which metal does NOT react with dilute hydrochloric acid?",
+            options: ["Zinc", "Magnesium", "Copper", "Iron"],
+            answer: 2
+        },
+        {
+            q: "What is formed when a metal reacts with oxygen?",
+            options: ["Metal hydroxide", "Metal oxide", "Metal salt", "Metal carbonate"],
+            answer: 1
+        },
+        {
+            q: "Which of the following describes a chemical change?",
+            options: ["Melting wax", "Dissolving sugar in tea", "Baking a cake", "Crushing a can"],
+            answer: 2
+        },
+        {
+            q: "What happens to a catalyst at the end of a chemical reaction?",
+            options: [
+                "It turns into a product.",
+                "It remains chemically unchanged.",
+                "It evaporates completely.",
+                "It decomposes into gas."
+            ],
+            answer: 1
+        },
+        {
+            q: "Which of the following metals can displace iron from iron(II) sulfate solution?",
+            options: ["Copper", "Silver", "Zinc", "Gold"],
+            answer: 2
+        },
+        {
+            q: "The term 'malleable' means that a material can be...",
+            options: [
+                "drawn into thin wires",
+                "hammered or pressed into thin sheets without breaking",
+                "dissolved easily in water",
+                "snapped easily when bent"
+            ],
+            answer: 1
+        },
+        {
+            q: "The term 'ductile' means that a material can be...",
+            options: [
+                "hammered into flat sheets",
+                "drawn into thin wires",
+                "melted at very low temperatures",
+                "attracted by a magnet"
+            ],
+            answer: 1
+        },
+        {
+            q: "Why is stainless steel preferred over iron for making cutlery and kitchen knives?",
+            options: [
+                "It is cheaper than pure iron.",
+                "It is softer and easier to bend.",
+                "It resists rusting and corrosion.",
+                "It melts at room temperature."
+            ],
+            answer: 2
+        },
+        {
+            q: "Which gas is produced when magnesium reacts with dilute sulfuric acid?",
+            options: ["Oxygen", "Carbon dioxide", "Hydrogen", "Sulfur dioxide"],
+            answer: 2
+        },
+        {
+            q: "According to collision theory, a reaction occurs only when particles collide with...",
+            options: [
+                "any amount of energy",
+                "sufficient energy (activation energy) and correct orientation",
+                "zero kinetic energy",
+                "light waves"
+            ],
+            answer: 1
+        },
+        {
+            q: "When ice melts into liquid water, which statement is TRUE?",
+            options: [
+                "A new chemical substance is formed.",
+                "It is a reversible physical change with no change in chemical composition.",
+                "Mass is destroyed during the melting process.",
+                "It is an irreversible chemical reaction."
+            ],
+            answer: 1
+        }
+    ];
+
+    // Fisher-Yates Shuffle Function
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Render Unscrambled Questions & Choices
+    function renderMCQuestions() {
+        let shuffledQuestions = [...mcQuestions];
+        shuffleArray(shuffledQuestions);
+
+        const container = document.getElementById('mcContainer');
+        const labels = ['A', 'B', 'C', 'D'];
+
+        shuffledQuestions.forEach((qObj, index) => {
+            let optionsWithStatus = qObj.options.map((opt, i) => {
+                return { text: opt, isCorrect: i === qObj.answer };
+            });
+
+            shuffleArray(optionsWithStatus);
+
+            let qDiv = document.createElement('div');
+            qDiv.className = 'question-card';
+
+            let qText = document.createElement('div');
+            qText.className = 'question-title';
+            qText.innerHTML = `${index + 1}. ${qObj.q}`;
+            qDiv.appendChild(qText);
+
+            let optList = document.createElement('ul');
+            optList.className = 'options-list';
+
+            optionsWithStatus.forEach((optObj, optIndex) => {
+                let li = document.createElement('li');
+                li.innerHTML = `
+                    <label>
+                        <input type="radio" name="mc_${index}" value="${optObj.isCorrect}">
+                        ${labels[optIndex]}. ${optObj.text}
+                    </label>
+                `;
+                optList.appendChild(li);
+            });
+
+            qDiv.appendChild(optList);
+            container.appendChild(qDiv);
+        });
+    }
+
+    // Calculate Score
+    function calculateScore() {
+        let correctCount = 0;
+        const totalMC = mcQuestions.length;
+
+        for (let i = 0; i < totalMC; i++) {
+            const selectedOption = document.querySelector(`input[name="mc_${i}"]:checked`);
+            if (selectedOption && selectedOption.value === "true") {
+                correctCount++;
+            }
+        }
+
+        const score = Math.round((correctCount / totalMC) * 100);
+        const resultBox = document.getElementById('resultBox');
+        resultBox.style.display = 'block';
+        resultBox.innerHTML = `Your Final Score: ${score} / 100<br><span style="font-size: 16px; font-weight: normal;">(You answered ${correctCount} out of ${totalMC} questions correctly)</span>`;
+
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+        renderMCQuestions();
+    };
+</script>
+
+</body>
+</html>
