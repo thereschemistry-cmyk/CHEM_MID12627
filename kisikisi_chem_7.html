@@ -65,6 +65,31 @@
       border: 1px solid var(--border-color);
     }
 
+    .student-info {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .student-info label {
+      font-weight: 600;
+      color: var(--text-color);
+    }
+
+    .student-info input {
+      padding: 10px 14px;
+      font-size: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .student-info input:focus {
+      border-color: var(--primary-color);
+    }
+
     .progress-bar-container {
       width: 100%;
       background-color: #e2e8f0;
@@ -121,6 +146,12 @@
       border-color: var(--primary-color);
     }
 
+    .option-btn.selected {
+      background-color: #bae6fd;
+      border-color: var(--primary-color);
+      font-weight: bold;
+    }
+
     .option-btn.correct {
       background-color: var(--correct-bg) !important;
       border-color: var(--correct-color) !important;
@@ -134,8 +165,25 @@
       color: var(--incorrect-color);
     }
 
-    .option-btn[disabled] {
-      cursor: default;
+    .submit-container {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .submit-btn, .restart-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .submit-btn:hover, .restart-btn:hover {
+      background-color: var(--primary-dark);
     }
 
     .score-board {
@@ -147,23 +195,6 @@
       margin-top: 20px;
       display: none;
     }
-
-    .restart-btn {
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: background 0.2s;
-    }
-
-    .restart-btn:hover {
-      background-color: var(--primary-dark);
-    }
   </style>
 </head>
 <body>
@@ -174,14 +205,24 @@
     <div class="teacher-badge">Teacher: Ms. Theres</div>
   </header>
 
+  <div class="student-info">
+    <label for="student-name">Student Name:</label>
+    <input type="text" id="student-name" placeholder="Enter your full name..." required>
+  </div>
+
   <div class="progress-bar-container">
     <div class="progress-bar" id="progress-bar"></div>
   </div>
 
   <div id="quiz-body"></div>
 
+  <div class="submit-container" id="submit-container">
+    <button class="submit-btn" onclick="submitQuiz()">Submit Answers</button>
+  </div>
+
   <div class="score-board" id="score-board">
     <h2>Review Completed!</h2>
+    <p id="student-display" style="font-size: 1.1rem; font-weight: 600;"></p>
     <p id="score-text" style="font-size: 1.2rem;"></p>
     <button class="restart-btn" onclick="initQuiz()">Try Again (Shuffle Questions)</button>
   </div>
@@ -292,12 +333,12 @@
     {
       q: "Mia warms up a solid block of chocolate in a pot. As the chocolate gets hotter, its temperature rises quickly. Inside the chocolate, the tiny particles are vibrating faster and faster. What type of energy is increasing inside the chocolate while the temperature goes up?",
       options: [
-        "Kinetic",
-        "Potential",
-        "Chemical",
-        "Light"
+        "Kinetic energy",
+        "Potential energy",
+        "Chemical energy",
+        "Light energy"
       ],
-      answer: "Kinetic"
+      answer: "Kinetic energy"
     },
     {
       q: "Which gas would be expected to diffuse the fastest?",
@@ -388,14 +429,112 @@
         "Distillation"
       ],
       answer: "Using a magnet"
+    },
+    {
+      q: "A student places an ice cube in a glass and leaves it at room temperature until it becomes liquid water. Name the change of state that occurs.",
+      options: [
+        "Melting",
+        "Freezing",
+        "Evaporation",
+        "Condensation"
+      ],
+      answer: "Melting"
+    },
+    {
+      q: "When an ice cube melts at room temperature, what happens to its particles as heat is absorbed?",
+      options: [
+        "They gain kinetic energy and vibrate fast enough to overcome fixed positions.",
+        "They lose energy and stop vibrating completely.",
+        "They shrink in size and form a gas.",
+        "They compress tightly together."
+      ],
+      answer: "They gain kinetic energy and vibrate fast enough to overcome fixed positions."
+    },
+    {
+      q: "Why are water particles able to move more freely after ice melts into liquid?",
+      options: [
+        "The particles have broken out of their rigid lattice structure and can slide past one another.",
+        "The particles expanded and turned into separate atoms.",
+        "The forces between particles became completely non-existent.",
+        "The liquid state removes all attraction between particles."
+      ],
+      answer: "The particles have broken out of their rigid lattice structure and can slide past one another."
+    },
+    {
+      q: "A drop of food colouring is added to a beaker of water. After some time, the colour spreads throughout the water without being stirred. Which particle process explains this?",
+      options: [
+        "Diffusion",
+        "Osmosis",
+        "Filtration",
+        "Evaporation"
+      ],
+      answer: "Diffusion"
+    },
+    {
+      q: "Fullerene is a spherical substance with the chemical formula C₆₀. What can you deduce about its structure?",
+      options: [
+        "Each molecule consists of 60 carbon atoms bonded together.",
+        "It consists of 60 different elements mixed physically.",
+        "It is a compound made of carbon and oxygen.",
+        "It contains 60 separate molecules of carbon."
+      ],
+      answer: "Each molecule consists of 60 carbon atoms bonded together."
+    },
+    {
+      q: "What is the correct element name for the chemical symbol Ca?",
+      options: [
+        "Calcium",
+        "Carbon",
+        "Copper",
+        "Cadmium"
+      ],
+      answer: "Calcium"
+    },
+    {
+      q: "What is the correct element name for the chemical symbol Fe?",
+      options: [
+        "Iron",
+        "Fluorine",
+        "Francium",
+        "Fermium"
+      ],
+      answer: "Iron"
+    },
+    {
+      q: "What is the correct element name for the chemical symbol Ne?",
+      options: [
+        "Neon",
+        "Nickel",
+        "Sodium",
+        "Nitrogen"
+      ],
+      answer: "Neon"
+    },
+    {
+      q: "What is the correct element name for the chemical symbol Si?",
+      options: [
+        "Silicon",
+        "Silver",
+        "Sodium",
+        "Sulfur"
+      ],
+      answer: "Silicon"
+    },
+    {
+      q: "A student is given a mixture containing iron filings, sulfur powder, and water. What is the correct sequence of steps to separate all three substances?",
+      options: [
+        "Use a magnet to remove iron filings, filter the mixture to collect sulfur powder, then evaporate the water.",
+        "Evaporate the water, filter the iron filings, then use a magnet on the remaining sulfur.",
+        "Filter out the water first, distill the sulfur powder, then use a magnet.",
+        "Boil the entire mixture until only iron filings remain."
+      ],
+      answer: "Use a magnet to remove iron filings, filter the mixture to collect sulfur powder, then evaporate the water."
     }
   ];
 
   let currentQuestions = [];
-  let answeredCount = 0;
-  let score = 0;
+  let userAnswers = {};
 
-  // Fisher-Yates Shuffle Algorithm
   function shuffleArray(array) {
     const arr = [...array];
     for (let i = arr.length - 1; i > 0; i--) {
@@ -406,12 +545,13 @@
   }
 
   function initQuiz() {
-    score = 0;
-    answeredCount = 0;
+    userAnswers = {};
+    document.getElementById('student-name').value = '';
+    document.getElementById('student-name').disabled = false;
     document.getElementById('score-board').style.display = 'none';
+    document.getElementById('submit-container').style.display = 'block';
     document.getElementById('progress-bar').style.width = '0%';
     
-    // Shuffle question order and options
     currentQuestions = shuffleArray(rawQuestions).map(q => {
       return {
         ...q,
@@ -444,7 +584,7 @@
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         btn.innerText = `${labels[optIndex]}. ${opt}`;
-        btn.onclick = () => handleSelectOption(qIndex, opt, btn, optionsGrid);
+        btn.onclick = () => selectOption(qIndex, opt, btn, optionsGrid);
         optionsGrid.appendChild(btn);
       });
 
@@ -453,49 +593,82 @@
     });
   }
 
-  function handleSelectOption(qIndex, selectedOpt, selectedBtn, optionsContainer) {
-    const question = currentQuestions[qIndex];
+  function selectOption(qIndex, selectedOpt, btn, optionsContainer) {
+    userAnswers[qIndex] = selectedOpt;
+
     const buttons = optionsContainer.querySelectorAll('.option-btn');
+    buttons.forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
 
-    // Disable all options for this question after selection
-    buttons.forEach(btn => btn.disabled = true);
-
-    if (selectedOpt === question.answer) {
-      selectedBtn.classList.add('correct');
-      score++;
-    } else {
-      selectedBtn.classList.add('incorrect');
-      // Highlight the correct option
-      buttons.forEach(btn => {
-        if (btn.innerText.substring(3) === question.answer) {
-          btn.classList.add('correct');
-        }
-      });
-    }
-
-    answeredCount++;
+    const answeredCount = Object.keys(userAnswers).length;
     const progressPercent = (answeredCount / currentQuestions.length) * 100;
     document.getElementById('progress-bar').style.width = `${progressPercent}%`;
-
-    if (answeredCount === currentQuestions.length) {
-      showResults();
-    }
   }
 
-  function showResults() {
+  function submitQuiz() {
+    const studentName = document.getElementById('student-name').value.trim();
+
+    if (!studentName) {
+      alert('Please enter your full name before submitting.');
+      document.getElementById('student-name').focus();
+      return;
+    }
+
+    const answeredCount = Object.keys(userAnswers).length;
+    if (answeredCount < currentQuestions.length) {
+      if (!confirm(`You have answered ${answeredCount} out of ${currentQuestions.length} questions. Are you sure you want to submit?`)) {
+        return;
+      }
+    }
+
+    let score = 0;
+    const cards = document.querySelectorAll('.question-card');
+
+    currentQuestions.forEach((q, qIndex) => {
+      const card = cards[qIndex];
+      const buttons = card.querySelectorAll('.option-btn');
+      const selected = userAnswers[qIndex];
+
+      buttons.forEach(btn => {
+        btn.disabled = true;
+        const optionText = btn.innerText.substring(3);
+
+        if (optionText === q.answer) {
+          btn.classList.add('correct');
+        } else if (optionText === selected) {
+          btn.classList.add('incorrect');
+        }
+      });
+
+      if (selected === q.answer) {
+        score++;
+      }
+    });
+
+    document.getElementById('student-name').disabled = true;
+    document.getElementById('submit-container').style.display = 'none';
+
     const scoreBoard = document.getElementById('score-board');
+    const studentDisplay = document.getElementById('student-display');
     const scoreText = document.getElementById('score-text');
     const percentage = Math.round((score / currentQuestions.length) * 100);
 
+    studentDisplay.innerText = `Student: ${studentName}`;
     scoreText.innerHTML = `You scored <strong>${score}</strong> out of <strong>${currentQuestions.length}</strong> (${percentage}%).`;
     scoreBoard.style.display = 'block';
     
     scoreBoard.scrollIntoView({ behavior: 'smooth' });
   }
 
-  // Initialize on page load
   window.onload = initQuiz;
 </script>
 
 </body>
 </html>
+```eof
+
+### Key Updates Added:
+* **Expanded to 30 Questions:** Converted all essay items from the original sheet (e.g., melting ice particle motion, diffusion of food coloring, fullerene $C_{60}$, element symbols like $Ca, Fe, Ne, Si$, and magnetic/filtration separation steps) into 4-option multiple-choice questions.
+* **Student Name Field:** Includes a compulsory text input box at the top before submitting.
+* **Explicit Submit Button:** Students can select/change their answers freely throughout the 30 questions before clicking **Submit Answers** to review their score and correct options.
+* **Automatic Shuffling:** Shuffles question sequence and options $A, B, C, D$ for every attempt.
